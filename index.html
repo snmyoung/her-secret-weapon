@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Her Secret Weapon is a beauty-meets-power brand empowering women through functional glam." />
+  <meta name="author" content="Suzette-Nicole Young" />
+  <meta property="og:title" content="Her Secret Weapon" />
+  <meta property="og:description" content="Pretty. Powerful. Prepared." />
+  <meta property="og:image" content="images/silhouette-banner" />
+  <meta property="og:type" content="website" />
+  <meta name="keywords" content="beauty, empowerment, warrior women, self-defense glam, feminine power" />
+
+  <title>Her Secret Weapon</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ 
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style/style.css" />
+
+  <style>
+    /* Internal CSS: Page-Specific Styling */
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #fff0f5;
+      color: #333;
+    }
+
+    nav {
+      background-color: #b2005b;
+      padding: 20px 0;
+      text-align: center;
+      border-top: 5px solid #d11e6a;
+      border-bottom: 5px solid #d11e6a;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    nav a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+      color: white;
+      text-decoration: none;
+      margin: 0 25px;
+      font-weight: 600;
+      font-size: 1.1em;
+      letter-spacing: 0.5px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffd6e8;
+    }
+
+    nav i {
+      margin-right: 6px;
+    }
+
+    nav i.fa-sparkles {
+      margin-left: -4px;
+      color: #ffd6e8;
+    }
+
+    header {
+      background-image: url('images/silhouette-banner.png');
+      background-size: cover;
+      background-position: center;
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      position: relative;
+      padding: 0 20px;
+    }
+
+    .hero-text {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 650px;
+    }
+
+    .hero-text h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5em;
+      margin-bottom: 15px;
+      color: white;
+    }
+
+    #rotating-quote {
+      font-size: 1.2em;
+      font-weight: 500;
+      color: #ffd6e8;
+      margin: 15px 0;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #b2005b;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 20px;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #820048;
+    }
+
+    #products {
+      padding: 60px 20px;
+      background-color: #fff5f9;
+      text-align: center;
+    }
+
+    #products h2 {
+      font-size: 2.2em;
+      margin-bottom: 40px;
+      color: #b2005b;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .product-card {
+      background-color: #ffffff;
+      border: 1px solid #e3d9e9;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 260px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: scale(1.05);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .product-card h3 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+      color: #5a003a;
+    }
+
+    .product-card p {
+      font-size: 0.95em;
+    }
+    #quiz, #contact-form {
+  padding: 60px 20px;
+  background-color: #fff5f9;
+  text-align: center;
+}
+
+#quiz h2, #contact-form h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2em;
+  color: #b2005b;
+  margin-bottom: 20px;
+}
+
+#quiz label, #contact-form label {
+  display: block;
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+#quiz button, #contact-form button {
+  margin-top: 20px;
+  background-color: #b2005b;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#quiz button:hover, #contact-form button:hover {
+  background-color: #820048;
+}
+
+#quizResult {
+  font-size: 1.2em;
+  color: #5a003a;
+  background-color: #fef1f7;
+  border: 2px dashed #b2005b;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9em;
+    }
+
+    footer .socials i {
+      margin: 0 10px;
+      font-size: 1.3em;
+      color: #ff99c8;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#about"><i class="fas fa-gem"></i> About</a>
+    <a href="#products"><i class="fas fa-box-open"></i><i class="fas fa-sparkles"></i> The Collection</a>
+    <a href="#contact"><i class="fas fa-comment-dots"></i> Contact</a>
+  </nav>
+
+  <!-- Banner -->
+  <header>
+    <div class="hero-text">
+      <h1>Her Secret Weapon</h1>
+      <p id="rotating-quote"><i class="fas fa-wand-sparkles"></i> She carries it all — and still stands tall.</p>
+      <a href="#products" class="btn"><i class="fas fa-magic"></i> Explore the Collection</a>
+    </div>
+  </header>
+
+  <!-- Products Section -->
+  <section id="products">
+    <h2>Her Secret Weapon Collection</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="images/shield-compact.png" alt="Shield Compact">
+        <h3>Shield Compact</h3>
+        <p>Rose gold warrior shield opens to reveal a mirror, powder, and blush — your power, your beauty.</p>
+      </div>
+      <div class="product-card">
+        <img src="images/lipstick-defense.png" alt="Warrior Gloss Lipstick">
+        <h3>Warrior Gloss</h3>
+        <p>Bold red lipstick with a hidden pepper spray twist — beauty that fights back.</p>
+      </div>
+      <div class="product-card">
+        <img src="images/hidden-intent-perfume.png" alt="Hidden Intent Perfume">
+        <h3>Hidden Intent</h3>
+        <p>Clear glass perfume with a silver atomizer — the base hides a sleek safety whistle.</p>
+      </div>
+      <div class="product-card">
+        <img src="images/armory-clutch.png" alt="Armory Clutch">
+        <h3>Armory Clutch</h3>
+        <p>Blush quilted pouch with gloss, mirror, alarm, flashlight, and pepper spray. Glam + grit.</p>
+      </div>
+      <div class="product-card">
+        <img src="images/battle.balm.png" alt="Battle Balm">
+        <h3>Battle Balm</h3>
+        <p>Pearl white multi-use balm with a hidden USB charger — heal, hide, hustle.</p>
+      </div>
+    </div>
+  </section>
+  <section id="quiz">
+    <h2>Find Your Secret Weapon</h2>
+    <form id="weaponForm">
+      <p><strong>1. What’s your day usually like?</strong></p>
+      <label><input type="radio" name="q1" value="armory"> Always on the go, multitasking queen</label><br>
+      <label><input type="radio" name="q1" value="gloss"> Out and about, need to stay safe</label><br>
+      <label><input type="radio" name="q1" value="balm"> Quiet hustle, work-from-anywhere vibe</label>
+  
+      <p><strong>2. What’s always in your bag?</strong></p>
+      <label><input type="radio" name="q2" value="armory"> Everything but the kitchen sink</label><br>
+      <label><input type="radio" name="q2" value="gloss"> Lip gloss & keys</label><br>
+      <label><input type="radio" name="q2" value="balm"> A charger and a prayer</label>
+  
+      <p><strong>3. What’s your vibe?</strong></p>
+      <label><input type="radio" name="q3" value="armory"> Soft glam + strong core</label><br>
+      <label><input type="radio" name="q3" value="gloss"> Fierce and fearless</label><br>
+      <label><input type="radio" name="q3" value="balm"> Calm, collected, creative</label>
+  
+      <br><br>
+      <button type="button" onclick="showResult()">Reveal My Weapon</button>
+    </form>
+  
+    <div id="quizResult" style="display:none; margin-top:30px;"></div>
+  </section>
+  
+  <!-- Contact Form Appears After Quiz -->
+  <section id="contact-form" style="display:none;">
+    <h2>Let’s Stay Connected</h2>
+    <form action="https://formspree.io/f/xnnpjdyq" method="POST">
+      <input type="hidden" name="match" id="matchValue">
+      
+      <label for="name"><i class="fas fa-user"></i> Your Name</label>
+      <input type="text" name="name" id="name" required>
+  
+      <label for="email"><i class="fas fa-envelope"></i> Your Email</label>
+      <input type="email" name="email" id="email" required>
+  
+      <label for="message"><i class="fas fa-comment"></i> Message</label>
+      <textarea name="message" id="message" rows="5" required></textarea>
+  
+      <button type="submit"><i class="fas fa-paper-plane"></i> Send</button>
+    </form>
+  </section>
+  
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>Join the warrior movement.</p>
+    <div class="socials">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+    </div>
+    <p>&copy; 2025 Her Secret Weapon. All rights reserved.</p>
+  </footer>
+
+  <!-- jQuery Rotation Script -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      const quotes = [
+        '<i class="fas fa-wand-sparkles"></i> She carries it all — and still stands tall.',
+        '<i class="fas fa-sparkles"></i> Beauty isn’t what makes her strong. It’s what reminds her she is.',
+        '<i class="fas fa-shield-heart"></i> She slays giants with grace.',
+        '<i class="fas fa-hand-sparkles"></i> Grace in her hands. Power in her stride.',
+        '<i class="fas fa-magic"></i> Pretty. Powerful. Prepared.',
+        '<i class="fas fa-baby-carriage"></i> A diaper bag and a dream. She’s ready.'
+      ];
+
+      let current = 0;
+
+      function rotateQuote() {
+        $('#rotating-quote').fadeOut(800, function() {
+          current = (current + 1) % quotes.length;
+          $(this).html(quotes[current]).fadeIn(800);
+        });
+      }
+
+      setInterval(rotateQuote, 4000);
+    });
+    function showResult() {
+    const answers = [
+      document.querySelector('input[name="q1"]:checked')?.value,
+      document.querySelector('input[name="q2"]:checked')?.value,
+      document.querySelector('input[name="q3"]:checked')?.value
+    ];
+
+    if (answers.includes(undefined)) {
+      alert("Please answer all questions.");
+      return;
+    }
+
+    let count = {armory: 0, gloss: 0, balm: 0};
+    answers.forEach(ans => count[ans]++);
+
+    let match = Object.keys(count).reduce((a, b) => count[a] > count[b] ? a : b);
+
+    let message = '';
+    if (match === 'armory') {
+      message = '<strong>You’re the Armory Clutch.</strong><br>Multitasker. Organizer. Unapologetic.<br>Your power is in your preparedness.';
+    } else if (match === 'gloss') {
+      message = '<strong>You’re the Warrior Gloss.</strong><br>Bold. Sleek. Always on point.<br>Beauty is your message, safety is your backup.';
+    } else {
+      message = '<strong>You’re the Battle Balm.</strong><br>Subtle. Smooth. Tech-savvy.<br>Your calm is your weapon.';
+    }
+
+    document.getElementById('quizResult').innerHTML = message;
+    document.getElementById('quizResult').style.display = 'block';
+    document.getElementById('contact-form').style.display = 'block';
+    document.getElementById('matchValue').value = match;
+  }
+  </script>
+</body>
+</html>
